@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color:#efe6dd;
+}
+#nav{
+    height:60px;
+    /*background-color: rgb(102,2,69);*/
+   background-color: #9a0002;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+}
+h1{
+    font-size: 1.5rem;
+   /* text-align: center;*/
+    color : #efe6dd;
+    margin-left : 54px;
+}
+#battleArea{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:120px;
+    margin-left : 50px;
+}
+
+.playerSide,
+.computerSide{
+    text-align:center;
+}
+
+.playerSide img,
+.computerSide img{
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.vs h2{
+    font-size:2rem;
+    color:#9a0002;
+}
+ #choices{
+    /*margin-top: px;*/
+    display : flex;
+    align-items : center;
+    justify-content: center;
+    margin-left : 200px;
+   /* You can use gap attribute if u did not specified height and width in choice class*/
+} 
+/*.choice{
+    height:300px;
+    width:300px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:5px solid transparent;
+}
+.choice:hover{
+    background-color:black;
+    border:5px solid black;
+    cursor:pointer;
+}
+.choice:hover img{
+    opacity:0.6;
+}*/
+/*.choice:hover img{
+  // opacity: 50%;
+   cursor: pointer;
+   border:4px solid rgb(114, 111, 97);
+}*/
+#scores{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:80px;
+    margin-top:60px;
+    margin-left : 50px;
+}
+.Marks{
+    width:180px;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+}
+.score{
+    font-size:4rem;
+    font-weight:bold;
+    color: 9a0002;
+}
+.name{
+    margin-top:10px;
+    font-size:1.4rem;
+    color:#444;
+    font-weight:bold;
+}
+.choice{
+    padding : 10px;
+    width : 275px;
+    border-radius: 50%;
+    border:5px solid transparent;
+}
+img{
+    height : 210px;
+    width : 210px;
+    object-fit : cover;
+    border-radius : 50%;
+}
+#Result{
+    margin-top: 65px;
+    display : flex;
+    align-items : center;
+    justify-content: center;
+}
+#Result p,#Rock p,#Paper p,#Scissor P{
+    font-size: 2rem;  
+    display : inline;
+    background-color:  #9a0002;
+    padding : 10px;
+    color : white;
+    border-radius: 1rem;
+    text-align : center;
+    cursor: pointer;
+}
+/* Animations of images */
+.shakePlayer{
+    animation: shakePlayer 0.7s linear;
+}
+
+.shakeComputer{
+    animation: shakeComputer 0.7s linear;
+}
+@keyframes shakePlayer{
+
+    0%{
+        transform:rotate(25deg);
+    }
+
+    25%{
+        transform:rotate(-25deg);
+    }
+
+    50%{
+        transform:rotate(25deg);
+    }
+
+    75%{
+        transform:rotate(-25deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+
+}
+@keyframes shakeComputer{
+
+    0%{
+        transform:rotate(-25deg);
+    }
+
+    25%{
+        transform:rotate(25deg);
+    }
+
+    50%{
+        transform:rotate(-25deg);
+    }
+
+    75%{
+        transform:rotate(25deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+
+}

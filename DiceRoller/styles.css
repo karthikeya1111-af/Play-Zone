@@ -1,0 +1,501 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#efe6dd;
+    color:#9a0002;
+
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    width:100%;
+    height:70px;
+    background:#9a0002;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:0 50px;
+    color:#efe6dd;
+    top:0;
+    left:0;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    z-index: 1000;
+
+}
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+.container{
+    width:90%;
+    margin:40px auto;
+    max-width:1200px;
+    background:white;
+    border-radius:18px;
+    padding:45px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+
+/* ===========================
+   PLAYERS
+=========================== */
+
+.players{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.player{
+
+    width:270px;
+
+    background:#efe6dd;
+
+    border:2px solid #9a0002;
+
+    border-radius:18px;
+
+    padding:25px;
+
+}
+
+.player h2{
+
+    margin-bottom:35px;
+
+    font-size:34px;
+
+}
+
+.vs{
+
+    width:70px;
+    height:70px;
+
+    background:#9a0002;
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+/* ===========================
+   DICE
+=========================== */
+
+.scene{
+
+    width:100px;
+    height:100px;
+
+    margin:20px auto 40px;
+
+    perspective:600px;
+
+}
+
+.cube{
+
+    width:100%;
+    height:100%;
+
+    position:relative;
+
+    transform-style:preserve-3d;
+
+    transform:rotateX(-30deg) rotateY(30deg);
+
+    transition:transform 1.2s ease-out;
+
+}
+
+/* ===========================
+   SCORE
+=========================== */
+
+.score-card{
+
+    background:white;
+
+    margin-top:18px;
+
+    padding:12px;
+
+    border-left:5px solid #9a0002;
+
+    border-radius:10px;
+
+}
+
+.score-card span{
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.score-card h3{
+
+    margin-top:8px;
+
+    font-size:28px;
+
+    color:#9a0002;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+button{
+
+    width:180px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#rollBtn{
+
+    background:#9a0002;
+
+    color:white;
+
+}
+
+#rollBtn:hover{
+
+    background:#760001;
+
+    transform:translateY(-3px);
+
+}
+
+#quitBtn{
+
+    background:#555;
+
+    color:white;
+
+}
+
+#quitBtn:hover{
+
+    background:#333;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   RESULT
+=========================== */
+
+.result-box{
+
+    margin-top:35px;
+
+}
+
+#result{
+
+    display:inline-block;
+
+    background:#efe6dd;
+
+    border:2px solid #9a0002;
+
+    border-radius:10px;
+
+    padding:12px 25px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+.players{
+
+    flex-direction:column;
+
+}
+
+.vs{
+
+    display:none;
+
+}
+
+.container{
+
+    margin-top:90px;
+
+}
+
+.navbar{
+
+    padding:0 20px;
+
+}
+
+.logo{
+
+    font-size:24px;
+
+}
+
+.nav-text{
+
+    font-size:18px;
+
+}
+
+}
+/* ===========================
+   DICE FACES
+=========================== */
+
+.face{
+
+    position:absolute;
+
+    width:100px;
+    height:100px;
+
+    background:#ffffff;
+
+    border:2px solid #9a0002;
+
+    border-radius:12px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+
+    padding:12px;
+
+    box-sizing:border-box;
+
+}
+
+/* ===========================
+   DICE DOTS
+=========================== */
+
+.dot{
+
+    width:16px;
+    height:16px;
+
+    background:#9a0002;
+
+    border-radius:50%;
+
+    justify-self:center;
+    align-self:center;
+
+    opacity:0;
+
+}
+
+/* ===========================
+   CUBE SIDES
+=========================== */
+
+.front{
+
+    transform:translateZ(50px);
+
+}
+
+.back{
+
+    transform:rotateY(180deg) translateZ(50px);
+
+}
+
+.right{
+
+    transform:rotateY(90deg) translateZ(50px);
+
+}
+
+.left{
+
+    transform:rotateY(-90deg) translateZ(50px);
+
+}
+
+.top{
+
+    transform:rotateX(90deg) translateZ(50px);
+
+}
+
+.bottom{
+
+    transform:rotateX(-90deg) translateZ(50px);
+
+}
+
+/* ===========================
+   DICE PATTERNS
+=========================== */
+
+/* ONE */
+
+.face[data-num="1"] .dot:nth-child(5){
+
+    opacity:1;
+
+}
+
+/* TWO */
+
+.face[data-num="2"] .dot:nth-child(1),
+.face[data-num="2"] .dot:nth-child(9){
+
+    opacity:1;
+
+}
+
+/* THREE */
+
+.face[data-num="3"] .dot:nth-child(1),
+.face[data-num="3"] .dot:nth-child(5),
+.face[data-num="3"] .dot:nth-child(9){
+
+    opacity:1;
+
+}
+
+/* FOUR */
+
+.face[data-num="4"] .dot:nth-child(1),
+.face[data-num="4"] .dot:nth-child(3),
+.face[data-num="4"] .dot:nth-child(7),
+.face[data-num="4"] .dot:nth-child(9){
+
+    opacity:1;
+
+}
+
+/* FIVE */
+
+.face[data-num="5"] .dot:nth-child(1),
+.face[data-num="5"] .dot:nth-child(3),
+.face[data-num="5"] .dot:nth-child(5),
+.face[data-num="5"] .dot:nth-child(7),
+.face[data-num="5"] .dot:nth-child(9){
+
+    opacity:1;
+
+}
+
+/* SIX */
+
+.face[data-num="6"] .dot:nth-child(1),
+.face[data-num="6"] .dot:nth-child(3),
+.face[data-num="6"] .dot:nth-child(4),
+.face[data-num="6"] .dot:nth-child(6),
+.face[data-num="6"] .dot:nth-child(7),
+.face[data-num="6"] .dot:nth-child(9){
+
+    opacity:1;
+
+}
+
+/* ===========================
+   HOVER EFFECTS
+=========================== */
+
+.player:hover{
+
+    transform:translateY(-6px);
+
+    transition:.3s;
+
+    box-shadow:0 12px 25px rgba(154,0,2,.15);
+
+}
+
+.score-card:hover{
+
+    background:#fdf7f3;
+
+}
+
+.scene:hover .cube{
+
+    transform:rotateX(-20deg) rotateY(40deg);
+
+}

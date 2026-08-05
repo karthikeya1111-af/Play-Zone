@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winner</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#efe6dd;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.container{
+
+    width:450px;
+    max-width:90%;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+}
+
+.trophy{
+
+    font-size:90px;
+    animation:bounce 1s infinite alternate;
+
+}
+
+h1{
+
+    color:#9a0002;
+    margin:20px 0;
+
+}
+
+#winnerName{
+
+    font-size:35px;
+    color:#c59d2f;
+    font-weight:bold;
+    margin:20px 0;
+
+}
+
+p{
+
+    color:#555;
+    margin-bottom:30px;
+    font-size:18px;
+
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#9a0002;
+    color:#efe6dd;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#730002;
+    transform:scale(1.03);
+
+}
+
+@keyframes bounce{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+<div class="container">
+<div class="trophy">🏆</div>
+<h1>Congratulations!</h1>
+
+<div id="winnerName"></div>
+
+<p>You reached Square 100 and won the game.</p>
+
+<button id="restartBtn">
+Play Again
+</button>
+
+</div>
+
+<script>
+
+const winner = localStorage.getItem("winner");
+
+document.querySelector("#winnerName").innerText =
+winner + " Wins!";
+
+document.querySelector("#restartBtn").addEventListener("click",()=>{
+
+    localStorage.clear();
+
+    window.location.href = "index.html";
+
+});
+
+</script>
+
+</body>
+</html>

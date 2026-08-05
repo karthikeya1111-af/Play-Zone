@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <rect width="400" height="250" fill="#efe6dd" rx="12"/>
+  <circle cx="200" cy="125" r="85" fill="#ffffff" stroke="#9a0002" stroke-width="4"/>
+  <path d="M 192 48 A 72 72 0 0 0 128 112 L 158 118 A 42 42 0 0 1 192 78 Z" fill="#9a0002"/>
+  <path d="M 208 48 A 72 72 0 0 1 272 112 L 242 118 A 42 42 0 0 0 208 78 Z" fill="#c42b2e"/>
+  <path d="M 128 138 A 72 72 0 0 0 192 202 L 192 172 A 42 42 0 0 1 158 132 Z" fill="#700001"/>
+  <path d="M 272 138 A 72 72 0 0 1 208 202 L 208 172 A 42 42 0 0 0 242 132 Z" fill="#e6686a"/>
+  <circle cx="200" cy="125" r="28" fill="#9a0002"/>
+  <text x="200" y="130" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#efe6dd" text-anchor="middle">MEMORY</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 250" width="100%" height="100%">
+  <rect width="400" height="250" fill="#efe6dd" rx="12"/>
+  <!-- Die 1 -->
+  <rect x="110" y="80" width="90" height="90" rx="16" fill="#9a0002" transform="rotate(-12 155 125)" shadow="drop-shadow(2px 4px 6px rgba(0,0,0,0.15))"/>
+  <circle cx="135" cy="105" r="7" fill="#efe6dd" transform="rotate(-12 155 125)"/>
+  <circle cx="175" cy="105" r="7" fill="#efe6dd" transform="rotate(-12 155 125)"/>
+  <circle cx="155" cy="125" r="7" fill="#efe6dd" transform="rotate(-12 155 125)"/>
+  <circle cx="135" cy="145" r="7" fill="#efe6dd" transform="rotate(-12 155 125)"/>
+  <circle cx="175" cy="145" r="7" fill="#efe6dd" transform="rotate(-12 155 125)"/>
+  
+  <!-- Die 2 -->
+  <rect x="210" y="80" width="90" height="90" rx="16" fill="#ffffff" stroke="#9a0002" stroke-width="4" transform="rotate(15 255 125)"/>
+  <circle cx="235" cy="105" r="7" fill="#9a0002" transform="rotate(15 255 125)"/>
+  <circle cx="275" cy="145" r="7" fill="#9a0002" transform="rotate(15 255 125)"/>
+  <circle cx="255" cy="125" r="7" fill="#9a0002" transform="rotate(15 255 125)"/>
+</svg>

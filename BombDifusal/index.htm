@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Defusal Challenge</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PlayZone Home Button -->
+    <a href="../index.html" class="playzone-home-btn" title="Back to PlayZone Home" style="position: fixed; top: 14px; right: 18px; z-index: 99999; background-color: #9a0002; color: #ffffff !important; padding: 8px 16px; border-radius: 30px; font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 14px; text-decoration: none !important; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(154, 0, 2, 0.35); border: 1.5px solid rgba(255, 255, 255, 0.3); transition: all 0.25s ease; line-height: 1;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home</span>
+    </a>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+        <h2>💣 Bomb Defusal Challenge</h2>
+    </nav>
+
+    <!-- ================= MAIN CONTAINER ================= -->
+
+    <div class="container">
+
+        <!-- ================= TOP SECTION ================= -->
+
+        <div class="top-section">
+
+            <!-- ========= Bomb Panel ========= -->
+
+            <div class="panel bomb-panel">
+
+                <h2>Bomb Panel</h2>
+
+                <div id="bombImage" class="bomb">
+    💣
+</div>
+
+                <div class="details">
+
+                    <p>
+                        ⏳ Time :
+                        <span id="timer">30</span>s
+                    </p>
+
+                    <p>
+                        🎯 Attempts :
+                        <span id="attempts">3</span>
+                    </p>
+
+                    <p>
+                        📌 Status :
+                        <span id="status">Waiting...</span>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ========= Hint Panel ========= -->
+
+            <div class="panel hint-panel">
+
+                <h2>PIN Hints</h2>
+
+                <ul id="hintList">
+
+                    <li>Press Start to Generate Hints</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- ================= PIN PANEL ================= -->
+
+        <div class="pin-panel">
+
+            <h2>Enter Secret PIN</h2>
+
+            <div class="pin-box">
+
+                <input type="text" maxlength="1" class="pin-input">
+
+                <input type="text" maxlength="1" class="pin-input">
+
+                <input type="text" maxlength="1" class="pin-input">
+
+                <input type="text" maxlength="1" class="pin-input">
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="startBtn">
+                    ▶ Start
+                </button>
+
+                <button id="submitBtn">
+                    ✔ Submit
+                </button>
+
+                <button id="restartBtn">
+                    🔄 Restart
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

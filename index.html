@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PlayZone - Your ultimate arcade and board game collection. Play Whack A Mole, Rock Paper Scissors, Snake and Ladder, Color Memory, Bomb Defusal, Dice Roller, and Tic Tac Toe instantly!">
+  <title>PlayZone | Arcade & Board Game Collection</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-header">
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <span class="brand-text">PlayZone</span>
+        </a>
+        
+        <div class="nav-links" id="navLinks">
+          <a href="#hero" class="nav-link active">Home</a>
+          <a href="#games" class="nav-link">Games</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#about" class="nav-link">About</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="random-play-btn" id="randomGameBtn" title="Play a Random Game">
+            <i class="fa-solid fa-dice"></i> <span>Random Game</span>
+          </button>
+          <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    
+    <div class="hero-container">
+      <div class="hero-badge">
+        <i class="fa-solid fa-bolt"></i> 8 Classic & Arcade Games Ready to Play
+      </div>
+      
+      <h1 class="hero-title">PlayZone</h1>
+      <p class="hero-tagline">Your ultimate arcade & board game collection. Jump straight into the action — no installs, zero downloads, pure instant fun!</p>
+      
+      <div class="hero-cta-group">
+        <a href="#games" class="btn-primary">
+          <i class="fa-solid fa-play"></i> Explore Games
+        </a>
+        <button class="btn-secondary" id="heroRandomBtn">
+          <i class="fa-solid fa-shuffle"></i> Surprise Me
+        </button>
+      </div>
+
+      <!-- Quick Search & Filter Controls -->
+      <div class="search-filter-wrapper">
+        <div class="search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search your favorite game..." aria-label="Search games">
+          <button class="clear-search" id="clearSearch" style="display:none;" aria-label="Clear search">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <div class="filter-pills" id="filterPills">
+          <button class="filter-btn active" data-filter="all">All (8)</button>
+          <button class="filter-btn" data-filter="arcade">Arcade</button>
+          <button class="filter-btn" data-filter="strategy">Strategy</button>
+          <button class="filter-btn" data-filter="puzzle">Puzzle</button>
+          <button class="filter-btn" data-filter="board">Board Game</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content - Game Cards Grid -->
+  <main class="main-content" id="games">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Arcade Game Collection</h2>
+        <p class="section-subtitle">Choose a game below and click <strong>Play Now</strong> to launch your favorite game!</p>
+      </div>
+
+      <!-- Responsive Games Grid -->
+      <div class="games-grid" id="gamesGrid">
+
+        <!-- Card 1: Whack A Mole -->
+        <article class="game-card" data-category="arcade" data-name="whack a mole">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Arcade</span>
+            <img src="images/whack_a_mole.png" alt="Whack A Mole Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Whack A Mole</h3>
+            <p class="game-description">Test your speed and reaction by whacking moles before they disappear into their holes!</p>
+            <div class="card-footer">
+              <a href="whack-a-mole-main/index.html" class="play-btn" data-game-url="whack-a-mole-main/index.html" data-game-title="Whack A Mole">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Rock Paper Scissors -->
+        <article class="game-card" data-category="strategy" data-name="rock paper scissors">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Classic</span>
+            <img src="images/rock_paper_scissors.png" alt="Rock Paper Scissors Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Rock Paper Scissors</h3>
+            <p class="game-description">Battle against the computer in the classic game of chance, tactics, and quick decisions.</p>
+            <div class="card-footer">
+              <a href="RockPaperSciccior/index.html" class="play-btn" data-game-url="RockPaperSciccior/index.html" data-game-title="Rock Paper Scissors">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Snake and Ladder -->
+        <article class="game-card" data-category="board" data-name="snake and ladder">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Board Game</span>
+            <img src="images/snake_and_ladder.png" alt="Snake and Ladder Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Snake and Ladder</h3>
+            <p class="game-description">Roll the dice and race your way to 100 while climbing ladders and dodging snakes!</p>
+            <div class="card-footer">
+              <a href="SnakeAndLadder/index.html" class="play-btn" data-game-url="SnakeAndLadder/index.html" data-game-title="Snake and Ladder">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Color Memory Challenge -->
+        <article class="game-card" data-category="puzzle" data-name="color memory challenge">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Memory</span>
+            <img src="images/color_memory.svg" alt="Color Memory Challenge Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Color Memory Challenge</h3>
+            <p class="game-description">Test and train your memory by repeating an ever-expanding sequence of colorful flashes.</p>
+            <div class="card-footer">
+              <a href="Colors/index.html" class="play-btn" data-game-url="Colors/index.html" data-game-title="Color Memory Challenge">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5: Bomb Defusal -->
+        <article class="game-card" data-category="puzzle" data-name="bomb defusal">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Puzzle</span>
+            <img src="images/bomb_defusal.svg" alt="Bomb Defusal Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Bomb Defusal</h3>
+            <p class="game-description">Race against the ticking timer to solve tricky codes and safely defuse the explosive!</p>
+            <div class="card-footer">
+              <a href="BombDifusal/index.htm" class="play-btn" data-game-url="BombDifusal/index.htm" data-game-title="Bomb Defusal">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: Dice Roller -->
+        <article class="game-card" data-category="arcade" data-name="dice roller">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Casual</span>
+            <img src="images/dice_roller.svg" alt="Dice Roller Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Dice Roller</h3>
+            <p class="game-description">Roll virtual 3D-styled dice with realistic animations for any tabletop or board game session.</p>
+            <div class="card-footer">
+              <a href="DiceRoller/index.html" class="play-btn" data-game-url="DiceRoller/index.html" data-game-title="Dice Roller">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 7: Tic Tac Toe -->
+        <article class="game-card" data-category="strategy" data-name="tic tac toe">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Strategy</span>
+            <img src="images/tic_tac_toe.svg" alt="Tic Tac Toe Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Tic Tac Toe</h3>
+            <p class="game-description">Outsmart your opponent in this timeless 3x3 grid strategy game of Xs and Os.</p>
+            <div class="card-footer">
+              <a href="Tic Tac Toe/index.html" class="play-btn" data-game-url="Tic%20Tac%20Toe/index.html" data-game-title="Tic Tac Toe">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 8: Hangman Challenge -->
+        <article class="game-card" data-category="puzzle" data-name="hangman challenge word guessing">
+          <div class="card-image-wrapper">
+            <span class="card-badge">Word Game</span>
+            <img src="images/hangman.svg" alt="Hangman Challenge Game" class="card-img" loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="game-title">Hangman Challenge</h3>
+            <p class="game-description">Guess secret words letter-by-letter across 5 categories before the figure is drawn!</p>
+            <div class="card-footer">
+              <a href="Hangman/index.html" class="play-btn" data-game-url="Hangman/index.html" data-game-title="Hangman Challenge">
+                <span>Play Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- No Results State -->
+      <div class="no-results" id="noResults" style="display: none;">
+        <i class="fa-solid fa-face-frown no-results-icon"></i>
+        <h3>No Games Found</h3>
+        <p>We couldn't find any games matching your search criteria.</p>
+        <button class="btn-primary" id="resetSearchBtn">Reset Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section" id="features">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Why Play on PlayZone?</h2>
+        <p class="section-subtitle">Designed for fast, accessible, and seamless gaming across all devices.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h4>Instant Play</h4>
+          <p>No downloads, sign-ups, or loading screens. Click Play Now and start playing immediately in your browser.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h4>Fully Responsive</h4>
+          <p>Optimized for desktop monitors, laptops, tablets, and smartphone touchscreens.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <h4>Diverse Genres</h4>
+          <p>From fast-paced reflex arcade games to thoughtful board games and memory challenges.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>100% Free</h4>
+          <p>Enjoy all 7 games completely free with unlimited replays and no hidden paywalls.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Game Modal Player (Optional Overlay Launcher) -->
+  <div class="game-modal" id="gameModal" aria-hidden="true">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-gamepad modal-icon"></i>
+          <h3 id="modalGameTitle">Playing Game</h3>
+        </div>
+        <div class="modal-actions">
+          <a href="#" id="modalExternalLink" target="_blank" class="modal-btn" title="Open in new tab">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full Page
+          </a>
+          <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe id="gameIframe" src="" title="Game Player" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <i class="fa-solid fa-gamepad"></i> PlayZone
+        </div>
+        <p class="footer-desc">Your modern, lightweight arcade game hub built with HTML5, CSS3, and JavaScript.</p>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#games">All Games</a></li>
+            <li><a href="#features">Features</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h5>Games</h5>
+          <ul>
+            <li><a href="whack-a-mole-main/index.html">Whack A Mole</a></li>
+            <li><a href="RockPaperSciccior/index.html">Rock Paper Scissors</a></li>
+            <li><a href="SnakeAndLadder/index.html">Snake and Ladder</a></li>
+            <li><a href="Colors/index.html">Color Memory</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>More Arcade</h5>
+          <ul>
+            <li><a href="BombDifusal/index.htm">Bomb Defusal</a></li>
+            <li><a href="DiceRoller/index.html">Dice Roller</a></li>
+            <li><a href="Tic Tac Toe/index.html">Tic Tac Toe</a></li>
+            <li><a href="Hangman/index.html">Hangman Challenge</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 <strong>PlayZone</strong> Arcade Collection. All rights reserved.</p>
+      <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake & Ladder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- PlayZone Home Button -->
+    <a href="../index.html" class="playzone-home-btn" title="Back to PlayZone Home" style="position: fixed; top: 14px; right: 18px; z-index: 99999; background-color: #9a0002; color: #ffffff !important; padding: 8px 16px; border-radius: 30px; font-family: system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 14px; text-decoration: none !important; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 14px rgba(154, 0, 2, 0.35); border: 1.5px solid rgba(255, 255, 255, 0.3); transition: all 0.25s ease; line-height: 1;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+        <span>Home</span>
+    </a>
+    <!-- Navigation Bar -->
+    <header id="nav">
+        <h2>Snake & Ladder</h2>
+    </header>
+    <!-- Main Container -->
+    <main id="container">
+        <!-- Game Board -->
+        <section id="board">
+            <!--
+                Leave this empty.
+                We will generate all 100 cells
+                using JavaScript.
+            -->
+        </section>
+        <!-- Control Panel -->
+        <aside id="panel">
+
+    <h2>Game Panel</h2>
+
+    <div class="player-card">
+
+        <div class="left">
+
+            <div class="red-dot"></div>
+
+            <span>Companion</span>
+
+        </div>
+
+        <span id="companionPos">1</span>
+
+    </div>
+
+    <div class="player-card">
+
+        <div class="left">
+
+            <div class="green-dot"></div>
+
+            <span>Computer</span>
+
+        </div>
+
+        <span id="computerPos">1</span>
+
+    </div>
+
+    <div id="turnBox">
+
+        <p>Current Turn</p>
+
+        <h3>Companion</h3>
+
+    </div>
+
+    <div id="diceContainer">
+        <div class="dice-box">
+            <span class="dice-label" style="color: #9a0002;">Companion</span>
+            <div id="companionDice" class="dice">⚀</div>
+        </div>
+        <div class="dice-box">
+            <span class="dice-label" style="color: #2f8f2f;">Computer</span>
+            <div id="computerDice" class="dice">⚀</div>
+        </div>
+    </div>
+
+    <button id="rollBtn">
+
+        🎲 Roll Dice
+
+    </button>
+
+    <button id="restartBtn">
+
+        ↺ Restart Game
+
+    </button>
+
+</aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

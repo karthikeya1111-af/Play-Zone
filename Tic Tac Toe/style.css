@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body {
+     background-color: #efe6dd;
+}
+#feild{
+    background-color: #efe6dd;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-top : 100px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#nav{
+    height: 60px;
+    display : flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9a0002;
+}
+#nav h2{
+     color : #efe6dd;
+}
+/* Turn Bar */
+#Turns{
+    width:420px;
+    height:70px;
+    background:white;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:6px;
+    margin-bottom:40px;
+}
+.x-turn,
+.y-turn{
+    width:49%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2rem;
+    border-radius:8px;
+    color:#efe6dd;
+    cursor:pointer;
+}
+/* X starts first */
+.x-turn{
+    background:#efe6dd;
+    color:#9a0002;
+}
+/* Game Board */
+#play-area{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    background: white;
+    padding : 15px;
+    border-radius: 8px;
+}
+section{
+    display:flex;
+    gap:12px;
+}
+.box{
+    width:140px;
+    height:140px;
+   background-color:#9a0002;
+    border-radius:8px;
+    display:flex;
+    justify-content:center; /*  Giving display to box so that x and o can be ordered in Center Of The Box */
+    align-items:center;
+    font-size:4rem;
+    font-weight:bold;
+    color:#efe6dd;
+    cursor:pointer;
+    transition:0.3s;
+}
+.box:hover{
+    transform:scale(1.05);
+}
